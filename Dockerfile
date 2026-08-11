@@ -18,8 +18,6 @@ COPY resort_project/assets assets
 COPY resort_project/priv priv
 RUN mix assets.deploy
 
-COPY resort_project/lib lib
-COPY resort_project/config config
 RUN mix compile
 
 # ตัดบรรทัด COPY rel ออก แล้วรัน release ได้เลย

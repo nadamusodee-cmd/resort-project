@@ -10,7 +10,6 @@ WORKDIR /app
 RUN mix local.hex --force && \
     mix local.rebar --force
 
-# ดึงไฟล์คอนฟิกจากโฟลเดอร์ resort_project
 COPY resort_project/mix.exs resort_project/mix.lock ./
 RUN mix deps.get --only prod
 RUN mix deps.compile
@@ -23,7 +22,7 @@ COPY resort_project/lib lib
 COPY resort_project/config config
 RUN mix compile
 
-COPY resort_project/rel rel
+# ตัดบรรทัด COPY rel ออก แล้วรัน release ได้เลย
 RUN mix release
 
 # Step 2: Release Stage
@@ -34,10 +33,5 @@ ENV MIX_ENV=prod
 WORKDIR /app
 
 COPY --from=builder /app/_build/prod/rel/resort_project ./
-
-CMD ["bin/resort_project", "start"]
-
-
-EXPOSE 4000
 
 CMD ["bin/resort_project", "start"]

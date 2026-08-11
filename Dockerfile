@@ -14,8 +14,10 @@ COPY resort_project/mix.exs resort_project/mix.lock ./
 RUN mix deps.get --only prod
 RUN mix deps.compile
 
-COPY resort_project/assets assets
-COPY resort_project/priv priv
+copy assets assets
+copy priv priv
+copy lib lib
+copy config config
 RUN mix assets.deploy
 
 RUN mix compile

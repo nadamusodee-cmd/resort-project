@@ -1,0 +1,333 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+  background-color: #48240d;
+  margin: 0;
+  padding: 0;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.room-section {
+    height: auto;
+    width: 100%;
+    position: relative;
+    min-height: 100vh;
+}
+.room-title {
+    color:white;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 35px;
+    font-weight: 100;
+    text-shadow: 7px 2px 4px rgba(0,0,0,0.5); 
+    margin-bottom: 15px; 
+}
+.room-subtitle {
+    color:white;
+    margin-bottom: 50px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 50px;
+    font-weight: 100;
+    text-shadow: 7px 2px 4px rgba(0,0,0,0.5); 
+}
+.hero-text {
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+}
+.R-container {
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background-color: rgba(0, 0, 0, 0.42);
+}
+.room-hero {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+}
+.room-hero ::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rbeg(0, 0, 0, 0.4);
+    z-index: 1;
+}
+.room-hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.room-hero-container {
+    position: relative;
+    width:100%;
+    height:770px;
+    overflow: hidden;
+}
+.room-hero-container::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #48240d 120%);
+    pointer-events: none;
+}
+.room-hero-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+}
+.nav-room {
+    word-spacing: 15px;
+    justify-content: flex-start;
+}
+
+.nav-room a{
+    text-decoration: none;
+    color:  white;
+    font-size: 20px;
+    font-family: Courier New , monospace;
+    position: relative;
+    padding: 20px;
+    border-radius: 20px;
+    transition: al 0.3 ease;
+}
+.nav-room a:hover {
+    color: rgb(137, 78, 193);
+    transition: color 0.3s ease;
+    width: 100%;
+    opacity: 1;
+    font-weight: 600;
+}
+.nav a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+.room-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: transparent;
+}
+room-header {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.R-logo-container {
+    display:flex;
+    align-items: center;
+    height: 60px;
+    width: 160px;
+    object-fit: contain;
+}
+#page2 {
+    background-color: #48240d;
+    color: #cfbdb1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.page2-box {
+    background-color:rgba(0, 0, 0, 0.42);
+    width: 100%;
+    height :auto;
+    max-width:1100px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.page2-title {
+    margin-top: 93px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+}
+.Monkey-room {
+    margin-top: 50px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 30px;
+    font-weight: 100;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+.Monkey-room::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 50px;
+    background-color : rgb(137, 78, 193);
+    flex-shrink: 0;
+    margin-left: 25px;
+}
+.room-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin: 35px 0 35px 0;
+}
+.filter-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 49px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.63);
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.25s ease;
+}
+.filter-btn:hover {
+    background-color: rgb(137, 78, 193);
+    color: white;
+    border-color: #ffffff;
+    transform: translateY(-2px);
+    font-weight: 600;
+}
+.room-card {
+    display:flex;
+    align-items: stretch;
+    width: 100%;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #f6f1e9;
+    box-sizing: border-box;
+}
+.carousel {
+  position: relative;
+  flex: 1;
+  min-height: 250px;
+  overflow: hidden;
+
+}
+.carousel img, .room-card img {
+    border-radius: 15px;
+    object-fit: cover;
+}
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgb(137, 78, 193);
+  color: #fff;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+.room-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    color: #4a3b32;
+    box-sizing: border-box;
+    text-align: left;
+    padding-top: 50px;
+}
+.room-info ul{
+    margin:  0;
+    padding-left: 60px;
+}
+.room-info li{
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+.book-btn {
+    align-self: flex-end;     
+    background-color: rgb(137, 78, 193);
+    color: white;
+    padding: 16px 24px;
+    border-radius: 48px;       
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.2s;
+}
+
+.book-btn:hover {
+    background-color: rgb(71, 34, 105);
+}
